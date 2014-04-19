@@ -1,0 +1,1 @@
+<li <?php echo ($this->request->params['controller'] == $controller) ? 'class="active"' : '';?>><?php echo $this->Html->link($name, array('controller'=>$controller, 'action'=>@$action)); ?></li><?php echo "\n"; ?>
