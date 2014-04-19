@@ -1,0 +1,1 @@
+<button id="back" type="button" class="btn btn-primary" style="float:right;" onclick="location.href='<?php echo $url?>'"><?php echo $name; ?></button>
