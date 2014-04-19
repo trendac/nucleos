@@ -9,12 +9,12 @@ Desenvolver uma aplicação baseado no framework CakePHP para ser o ponto de par
 - Login de Acesso;
 - Minha Conta (Dados Pessoais e Alteração de Senha);
 - Módulo de Configuração do Sistema:
--- Cadastro de Permissões;
--- Cadastro de Funcionalidades;
--- Cadastro de Grupos (Perfil);
--- Cadastro de Usuário;
--- Cadastro de Módulos;
--- Cadastro de Menu;
+ - Cadastro de Permissões;
+ - Cadastro de Funcionalidades;
+ - Cadastro de Grupos (Perfil);
+ - Cadastro de Usuário;
+ - Cadastro de Módulos;
+ - Cadastro de Menu;
 
 Objetivos Secundários:
 - Reunir desenvolvedores interessados no projeto para ampliar o número de funcionalidades elencadas inicialmente para aperfeiçoar o sistema gradativamente;
