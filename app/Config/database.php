@@ -68,7 +68,7 @@ class DATABASE_CONFIG {
 		'login' => 'root',
 		'password' => '',
 		'database' => 'nucleos',
-		'prefix' => '',
+		'prefix' => '', 
 		'encoding' => 'utf8',
 	);
 
