@@ -15,7 +15,6 @@ Desenvolver uma aplicação baseado no framework CakePHP para ser o ponto de par
  - Cadastro de Usuário;
  - Cadastro de Módulos;
  - Cadastro de Menu;
- - Auditoria;
 
 Objetivos Secundários:
 - Reunir desenvolvedores interessados no projeto para ampliar o número de funcionalidades elencadas inicialmente para aperfeiçoar o sistema gradativamente;

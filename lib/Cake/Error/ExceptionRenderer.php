@@ -228,7 +228,7 @@ class ExceptionRenderer {
 	public function error500($error) {
 		$message = $error->getMessage();
 		if (!Configure::read('debug')) {
-			$message = __d('cake', 'An Internal Error Has Occurred.');
+			$message = __d('cake', 'Um erro interno ocorreu.');
 		}
 		$url = $this->controller->request->here();
 		$code = ($error->getCode() > 500 && $error->getCode() < 506) ? $error->getCode() : 500;

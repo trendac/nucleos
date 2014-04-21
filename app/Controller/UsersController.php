@@ -96,6 +96,10 @@ class UsersController extends AppController {
         }
     }    
     public function profile() {
+        // CRIA VALIDAÇÃO DE CAMPOS DO FORMULÁRIO
+        $this->User->validate['name'] = array('required' => array('rule' => 'notEmpty','message'  => 'Nome obrigatório.', 'required' => true));
+        $this->User->validate['active'] = array('required' => array('rule' => 'notEmpty','message'  => 'Ativo obrigatório.', 'required' => true));
+
         // PEGA ID DA SESSÃO
         $id = $this->Session->read('Auth.User.id');
         
@@ -105,7 +109,7 @@ class UsersController extends AppController {
         }
         if ($this->request->is('post') || $this->request->is('put')) {
             if ($this->User->save($this->request->data)) {
-                $this->Session->setFlash('Dados da conta atualizados com sucesso.', 'alert', array('plugin' => 'BoostCake', 'class' => 'alert-success'));
+                $this->Session->setFlash('Senha atualizada com sucesso.', 'alert', array('plugin' => 'BoostCake', 'class' => 'alert-success'));
                 $this->redirect(array('action' => 'profile'));
 //                if($this->request->is('ajax')){ 
 //                    $error = 0;
@@ -116,13 +120,15 @@ class UsersController extends AppController {
 //                    $this->redirect(array('action' => 'login'));
 //                }
             } else {
-                $this->Session->setFlash('Não foi possível editar o registro. Favor tentar novamente.', 'alert', array('plugin' => 'BoostCake', 'class' => 'alert-danger'));
+                $this->Session->setFlash('Não foi possível atualizar a senha. Favor tentar novamente.', 'alert', array('plugin' => 'BoostCake', 'class' => 'alert-danger'));
+                
+                $this->request->data = $this->User->find('first', array('conditions'=>array('User.id'=>$id)));
+                unset($this->request->data['User']['password']);
+                $this->set('groups', $this->User->Group->find('list', array('conditions'=>array('Group.id'=>$this->request->data['User']['group_id']))));
             }
         } else {
             $this->request->data = $this->User->read(null, $id);
             unset($this->request->data['User']['password']);
-            
-            // PEGA LISTA DE GRUPOS ATIVOS
             $this->set('groups', $this->User->Group->find('list', array('conditions'=>array('Group.id'=>$this->request->data['User']['group_id']))));
         }
     }

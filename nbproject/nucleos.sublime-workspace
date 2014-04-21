@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"valida",
+				"validaAlteracaoSenha"
+			],
+			[
 				"comple",
 				"completed"
 			],
@@ -303,8 +307,40 @@
 			"file": "/D/Desenvolvimento/workspace/nucleos/app/Config/core.php",
 			"settings":
 			{
-				"buffer_size": 13280,
-				"line_ending": "Unix"
+				"buffer_size": 13221,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Gustavo/Documents/GitHub/nucleos/index.html",
+			"settings":
+			{
+				"buffer_size": 3167,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/Desenvolvimento/workspace/nucleos/app/View/Users/profile.ctp",
+			"settings":
+			{
+				"buffer_size": 2593,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/Desenvolvimento/workspace/nucleos/app/Controller/UsersController.php",
+			"settings":
+			{
+				"buffer_size": 9959,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/Desenvolvimento/workspace/nucleos/app/Model/User.php",
+			"settings":
+			{
+				"buffer_size": 3183,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -336,10 +372,19 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Gustavo/Documents/GitHub/nucleos/.gitignore",
+		"/D/Desenvolvimento/workspace/nucleos/lib/Cake/Error/ExceptionRenderer.php",
+		"/D/Desenvolvimento/workspace/nucleos/app/View/Errors/error500.ctp",
+		"/D/Desenvolvimento/workspace/nucleos/lib/Cake/Test/test_app/View/Errors/error500.ctp",
+		"/D/Desenvolvimento/workspace/nucleos/lib/Cake/Console/Templates/skel/View/Errors/error500.ctp",
+		"/D/Desenvolvimento/workspace/nucleos/lib/Cake/basics.php",
+		"/D/Desenvolvimento/workspace/nucleos/app/Config/database.php",
+		"/C/Users/Gustavo/Documents/GitHub/nucleos/dump.sql",
+		"/D/Desenvolvimento/workspace/nucleos/app/Config/databese.php",
+		"/D/Desenvolvimento/workspace/nucleos/.gitignore",
 		"/D/Desenvolvimento/workspace/nucleos2/.gitignore",
 		"/D/Desenvolvimento/workspace/nucleos/app/View/Layouts/bootstrap3.ctp",
 		"/D/Desenvolvimento/workspace/nucleos/dump.sql",
-		"/D/Desenvolvimento/workspace/nucleos/app/Config/database.php",
 		"/D/Desenvolvimento/workspace/nucleos/README.md",
 		"/D/Desenvolvimento/workspace/asana/asana.php",
 		"/C/Users/Gustavo/AppData/Local/Temp/fz3temp-1/index.php",
@@ -454,26 +499,18 @@
 		"/D/Desenvolvimento/workspace/sisgeop/app/views/reajustamentos/edit.ctp",
 		"/D/Desenvolvimento/workspace/sisgeop/app/views/reajustamentos/add.ctp",
 		"/D/Desenvolvimento/workspace/sisgeop/app/models/processo.php",
-		"/D/Desenvolvimento/workspace/sisgeop/app/models/projeto.php",
-		"/D/Desenvolvimento/workspace/sisgeop/app/models/execucoes_pagamento.php",
-		"/D/Desenvolvimento/workspace/sisgeop/app/webroot/js/functions.js",
-		"/D/Desenvolvimento/workspace/sisgeop/app/views/execucoes_pagamentos/add.ctp",
-		"/D/Desenvolvimento/workspace/sisgeop/app/views/execucoes_pagamentos/edit.ctp",
-		"/D/Desenvolvimento/workspace/sisgeop/app/models/execucoes_paralizacao.php",
-		"/D/Desenvolvimento/workspace/sisgeop/app/views/execucoes_paralizacoes/edit.ctp",
-		"/D/Desenvolvimento/workspace/sisgeop/app/views/execucoes_paralizacoes/add.ctp",
-		"/D/Desenvolvimento/workspace/sisgeop/app/views/cessoes/edit.ctp",
-		"/D/Desenvolvimento/workspace/sisgeop/app/views/cessoes/add.ctp"
+		"/D/Desenvolvimento/workspace/sisgeop/app/models/projeto.php"
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 45.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
+			"D:\\Desenvolvimento\\workspace\\nucleos",
 			"D:\\Desenvolvimento\\workspace\\sisgeop\\app\\views\\relatorios",
 			"Análise da Equipe Técnica",
 			"D:\\Desenvolvimento\\workspace\\sisgeop\\app\\models",
@@ -539,6 +576,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"An Internal Error Has Occurred.",
+			"pr(",
 			"Anderson Carlos",
 			"askAsana(",
 			"askAsana",
@@ -664,9 +703,7 @@
 			"data",
 			"Data ",
 			"ativo",
-			"ORI",
-			"DOCUMENTOS DIGITALIZADOS",
-			"documentos di"
+			"ORI"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -725,7 +762,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -733,7 +770,7 @@
 					"file": "/D/Desenvolvimento/workspace/nucleos/app/Config/core.php",
 					"settings":
 					{
-						"buffer_size": 13280,
+						"buffer_size": 13221,
 						"regions":
 						{
 						},
@@ -751,6 +788,118 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Users/Gustavo/Documents/GitHub/nucleos/index.html",
+					"settings":
+					{
+						"buffer_size": 3167,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3159,
+								3159
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 720.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/D/Desenvolvimento/workspace/nucleos/app/View/Users/profile.ctp",
+					"settings":
+					{
+						"buffer_size": 2593,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/D/Desenvolvimento/workspace/nucleos/app/Controller/UsersController.php",
+					"settings":
+					{
+						"buffer_size": 9959,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4156,
+								4156
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1260.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/D/Desenvolvimento/workspace/nucleos/app/Model/User.php",
+					"settings":
+					{
+						"buffer_size": 3183,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2511,
+								2237
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 84.0,
+						"translation.y": 550.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
