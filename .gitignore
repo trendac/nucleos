@@ -7,3 +7,4 @@ app/[Cc]onfig/database.php
 !empty
 app/Config/core.php
 app/Config/database.php
+app/nbproject/*
