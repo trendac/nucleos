@@ -109,7 +109,7 @@ class UsersController extends AppController {
         }
         if ($this->request->is('post') || $this->request->is('put')) {
             if ($this->User->save($this->request->data)) {
-                $this->Session->setFlash('Senha atualizada com sucesso.', 'alert', array('plugin' => 'BoostCake', 'class' => 'alert-success'));
+                $this->Session->setFlash('Conta atualizada com sucesso.', 'alert', array('plugin' => 'BoostCake', 'class' => 'alert-success'));
                 $this->redirect(array('action' => 'profile'));
 //                if($this->request->is('ajax')){ 
 //                    $error = 0;

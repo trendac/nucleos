@@ -46,8 +46,10 @@ class User extends AppModel {
     public function beforeValidate($options = array()) {
         // VERIFICA SE A SENHA ESTÁ SENDO ALTERADA
         if (isset($this->data['User']['password']) && isset($this->data['User']['confirmacao'])){
-            // REMOVE A VALIDAÇÃO DO CAMPO USERNAME
-            unset($this->validate['username']);
+            // REMOVE A VALIDAÇÃO DO CAMPO USERNAME, NAME E ACTIVE
+            unset($this->validate['username']); 
+            unset($this->validate['name']);
+            unset($this->validate['active']);
         } else {
             // REMOVE A VALIDAÇÃO DE ALTERAÇÃO DE SENHA DO CAMPO PASSWORD
             unset($this->validate['password']['validaAlteracaoSenha']);
@@ -56,6 +58,7 @@ class User extends AppModel {
         // ENCRIPTA A SENHA
         if (isset($this->data['User']['password'])) {
             $this->data['User']['password'] = AuthComponent::password($this->data['User']['password']);
+            $this->data['User']['confirmacao'] = AuthComponent::password($this->data['User']['confirmacao']);
         }
 
         // VERIFICA O TIPO DE USUÁRIO QUE ESTÁ SENDO CADASTRADO OU ALTERADO

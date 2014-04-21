@@ -20,7 +20,7 @@ class FuncionalidadesController extends AppController {
         
         // ESTILIZA LINHA DA GRID
         foreach($dados as $k => $v){
-            if ($v['Funcionalidade']['ativo'] != 'Sim') {
+            if ($v['Funcionalidade']['ativo'] != 'Sim' || $v['Funcionalidade']['totalPermissoes'] == 0) {
                 $dados[$k]['Funcionalidade']['style'] = 'background-color: #F2C9CA';
             }
         }

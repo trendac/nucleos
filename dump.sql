@@ -11,7 +11,6 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 -- Copiando estrutura do banco de dados para nucleos
-DROP DATABASE IF EXISTS `nucleos`;
 CREATE DATABASE IF NOT EXISTS `nucleos` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `nucleos`;
 
@@ -30,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `funcionalidades` (
   CONSTRAINT `FK_funcionalidades_modulos` FOREIGN KEY (`modulo_id`) REFERENCES `modulos` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
--- Copiando dados para a tabela nucleos.funcionalidades: ~7 rows (aproximadamente)
+-- Copiando dados para a tabela nucleos.funcionalidades: ~9 rows (aproximadamente)
 DELETE FROM `funcionalidades`;
 /*!40000 ALTER TABLE `funcionalidades` DISABLE KEYS */;
 INSERT INTO `funcionalidades` (`id`, `name`, `modulo_id`, `active`, `created`, `modified`) VALUES
@@ -40,7 +39,7 @@ INSERT INTO `funcionalidades` (`id`, `name`, `modulo_id`, `active`, `created`, `
 	(4, 'Permissões', 1, 1, '2014-03-31 21:42:12', '2014-04-04 18:39:27'),
 	(9, 'Home', 2, 1, '2014-04-01 10:59:32', '2014-04-01 18:29:33'),
 	(10, 'Módulos', 1, 1, '2014-04-01 15:12:20', '2014-04-04 18:39:27'),
-	(11, 'Menu', 1, 0, '2014-04-01 15:19:58', '2014-04-04 18:39:27'),
+	(11, 'Menu', 1, 1, '2014-04-01 15:19:58', '2014-04-21 10:30:19'),
 	(12, 'Dashboard', 1, 1, '2014-04-01 22:15:34', '2014-04-04 19:41:15'),
 	(13, 'Minha Conta', 2, 1, '2014-04-15 15:21:36', '2014-04-15 15:21:36');
 /*!40000 ALTER TABLE `funcionalidades` ENABLE KEYS */;
@@ -85,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `funcionalidades_permissions` (
   CONSTRAINT `FK__permissions` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=67 DEFAULT CHARSET=utf8;
 
--- Copiando dados para a tabela nucleos.funcionalidades_permissions: ~22 rows (aproximadamente)
+-- Copiando dados para a tabela nucleos.funcionalidades_permissions: ~24 rows (aproximadamente)
 DELETE FROM `funcionalidades_permissions`;
 /*!40000 ALTER TABLE `funcionalidades_permissions` DISABLE KEYS */;
 INSERT INTO `funcionalidades_permissions` (`id`, `funcionalidade_id`, `permission_id`) VALUES
@@ -187,7 +186,7 @@ CREATE TABLE IF NOT EXISTS `permissions` (
   UNIQUE KEY `name` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
 
--- Copiando dados para a tabela nucleos.permissions: ~32 rows (aproximadamente)
+-- Copiando dados para a tabela nucleos.permissions: ~33 rows (aproximadamente)
 DELETE FROM `permissions`;
 /*!40000 ALTER TABLE `permissions` DISABLE KEYS */;
 INSERT INTO `permissions` (`id`, `name`, `description`, `created`, `modified`) VALUES
@@ -197,10 +196,6 @@ INSERT INTO `permissions` (`id`, `name`, `description`, `created`, `modified`) V
 	(4, 'permissions.edit', NULL, '2014-03-25 18:14:42', '2014-03-25 18:14:42'),
 	(5, 'permissions.checar', 'Verifica permissões que não foram cadastras nos controllers', '2014-03-25 18:14:42', '2014-03-31 20:56:28'),
 	(6, 'permissions.delete', NULL, '2014-03-25 18:14:42', '2014-03-25 18:14:42'),
-	(8, 'posts.view', NULL, '2014-03-25 18:14:42', '2014-03-25 18:14:42'),
-	(9, 'posts.add', NULL, '2014-03-25 18:14:42', '2014-03-25 18:14:42'),
-	(10, 'posts.edit', NULL, '2014-03-25 18:14:42', '2014-03-25 18:14:42'),
-	(11, 'posts.delete', NULL, '2014-03-25 18:14:42', '2014-03-25 18:14:42'),
 	(12, 'users.index', NULL, '2014-03-25 18:14:42', '2014-03-25 18:14:42'),
 	(14, 'users.add', NULL, '2014-03-25 18:14:42', '2014-03-25 18:14:42'),
 	(15, 'users.edit', NULL, '2014-03-25 18:14:42', '2014-03-25 18:14:42'),
@@ -217,7 +212,6 @@ INSERT INTO `permissions` (`id`, `name`, `description`, `created`, `modified`) V
 	(26, 'groups.add', NULL, '2014-03-31 04:26:50', '2014-03-31 04:26:50'),
 	(27, 'groups.edit', NULL, '2014-03-31 04:26:50', '2014-03-31 04:26:50'),
 	(28, 'groups.delete', NULL, '2014-03-31 04:26:50', '2014-03-31 04:26:50'),
-	(29, 'posts.index', NULL, '2014-04-01 11:42:21', '2014-04-01 11:42:21'),
 	(30, 'modulos.index', NULL, '2014-04-01 15:11:22', '2014-04-01 15:11:22'),
 	(31, 'modulos.add', NULL, '2014-04-01 15:11:22', '2014-04-01 15:11:22'),
 	(32, 'modulos.edit', NULL, '2014-04-01 15:11:22', '2014-04-01 15:11:22'),
@@ -241,14 +235,13 @@ CREATE TABLE IF NOT EXISTS `users` (
   UNIQUE KEY `username` (`username`),
   KEY `FK_users_groups` (`group_id`),
   CONSTRAINT `FK_users_groups` FOREIGN KEY (`group_id`) REFERENCES `groups` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
--- Copiando dados para a tabela nucleos.users: ~2 rows (aproximadamente)
+-- Copiando dados para a tabela nucleos.users: ~1 rows (aproximadamente)
 DELETE FROM `users`;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `group_id`, `username`, `password`, `name`, `active`, `created`, `modified`) VALUES
-	(1, 1, 'gcardoso@gmail.com', 'e12c9f907d531a594ca6df726ad79ca26d5eaff8', 'Gustavo Cardoso', 1, '2014-03-21 12:13:48', '2014-04-15 16:51:19'),
-	(3, 2, 'teste@teste.com', 'de0a9447da7c1419f4305885f898036fe56efd09', '', 1, '2014-03-30 17:28:35', '2014-03-30 17:36:16');
+	(4, 1, 'demo@nucleos.com', '5b59c08f645574a09fc963c381f872fe63d69601', 'Desenvolvedor', 1, '2014-04-19 17:40:09', '2014-04-21 09:51:38');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;

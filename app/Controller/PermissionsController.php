@@ -42,15 +42,15 @@ class PermissionsController extends AppController  {
         
         // VERIFICA SE A PERMISSÃO EXISTE NO CONTROLLER
         foreach($permissions as $k => $v){
+            if ($permissions[$k]['Permission']['totalFuncionalidades'] == 0){
+                $permissions[$k]['Permission']['style'] = 'background-color: #fbeed5';
+            }
+
             if (in_array($v['Permission']['name'], $aux)) {
                 $permissions[$k]['Permission']['valida'] = 'Sim';
             } else {
                 $permissions[$k]['Permission']['valida'] = 'Não';
-                $permissions[$k]['Permission']['style'] = 'background-color: #F2C9CA';
-            }
-            
-            if ($permissions[$k]['Permission']['totalFuncionalidades'] == 0){
-                $permissions[$k]['Permission']['style'] = 'background-color: #fbeed5';
+                $permissions[$k]['Permission']['style'] = 'background-color: #F2C9CA;color:red;';
             }
 
             if ($permissions[$k]['Permission']['valida'] != $valida && $valida != null){
@@ -73,8 +73,14 @@ class PermissionsController extends AppController  {
             exit;
         }
         
+        // CALCULA TOTAL DE PERMISSÕES A ADICIONAR
+        $adicionar = ((count($aux)-count($permissions)) < 0) ? 0 : count($aux)-count($permissions);
+
+        // CALCULA TOTAL DE PERMISSÕES A REMOVER
+        $remover = ((count($aux)-count($permissions)) > 0) ? 0 : count($aux)-count($permissions);
+
         // ENVIA PARA A VIEW O TOTAL DE PERMISSÕES A ADICIONAR
-        $this->set(array('adicionar'=>count($aux)-count($permissions)));
+        $this->set(compact('adicionar','remover'));
 	}
     
     public function add(){
