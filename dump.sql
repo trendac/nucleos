@@ -10,11 +10,6 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
--- Copiando estrutura do banco de dados para nucleos
-CREATE DATABASE IF NOT EXISTS `nucleos` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `nucleos`;
-
-
 -- Copiando estrutura para tabela nucleos.funcionalidades
 CREATE TABLE IF NOT EXISTS `funcionalidades` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -241,7 +236,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 DELETE FROM `users`;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `group_id`, `username`, `password`, `name`, `active`, `created`, `modified`) VALUES
-	(4, 1, 'demo@nucleos.com', '5b59c08f645574a09fc963c381f872fe63d69601', 'Desenvolvedor', 1, '2014-04-19 17:40:09', '2014-04-21 09:51:38');
+	(1, 1, 'demo@nucleos.com', '5b59c08f645574a09fc963c381f872fe63d69601', 'Desenvolvedor', 1, '2014-04-19 17:40:09', '2014-04-21 09:51:38');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
