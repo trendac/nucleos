@@ -8,3 +8,4 @@ app/[Cc]onfig/database.php
 app/Config/core.php
 app/Config/database.php
 app/nbproject/*
+*.sublime-workspace
