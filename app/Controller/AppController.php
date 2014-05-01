@@ -85,7 +85,11 @@ class AppController extends Controller {
         
         if (!$temPermissao){
             $dados = $thisGroup->Funcionalidade->Permission->find('all', array('conditions' => array('Permission.name =' => $permissao)));
-            $this->Session->setFlash($this->Auth->authError.' <b>'.$dados[0]['Funcionalidade'][0]['name'].'</b>', 'alert', array('plugin' => 'BoostCake', 'class' => 'alert-danger'));
+            if (isset($dados[0])){
+                $this->Session->setFlash($this->Auth->authError.' <b>'.$dados[0]['Funcionalidade'][0]['name'].'</b>', 'alert', array('plugin' => 'BoostCake', 'class' => 'alert-danger'));
+            } else {
+                $this->Session->setFlash($this->Auth->authError.' <b> Não cadastrado</b>', 'alert', array('plugin' => 'BoostCake', 'class' => 'alert-danger'));
+            }
         }
         
         return $temPermissao;
